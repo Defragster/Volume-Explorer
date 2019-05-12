@@ -59,7 +59,6 @@ class VexXModem {
     }
     void out(uint8_t v) {
         s->write(v);
-        Serial.send_now();
         s->flush();
         write_log(v, 'O');
     }
