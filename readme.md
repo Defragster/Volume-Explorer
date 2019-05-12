@@ -18,6 +18,12 @@ You must have SdFat library installed : https://github.com/greiman/SdFat
 
 ## Commands
 
+**Listing directory**
+
+*ls*
+
+List current path
+
 **Changing directory**
 
 *cd path*
