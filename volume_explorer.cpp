@@ -391,7 +391,6 @@ void VolumeExplorer::cmd_recv(char const *filename) {
         term->printf("ready to receive to file %s - disconnect from terminal and launch sx foo.txt > /dev/your_device < /dev/your_device from command line\n",
                      b);
         xmodem.enable_fast_write(true);
-        xmodem.enable_log(false);
         xmodem.receive(file);
         file.close();
     } else
@@ -407,7 +406,6 @@ void VolumeExplorer::cmd_send(char const *filename) {
     if (file.open(b, O_READ)) {
         term->printf("ready to send to file %s - disconnect from terminal and launch rx foo.txt > /dev/your_device < /dev/your_device from command line\n", b);
         xmodem.enable_fast_write(true);
-        xmodem.enable_log(false);
         xmodem.send(file);
         file.close();
     } else

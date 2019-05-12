@@ -82,11 +82,10 @@ class VexXModem {
     }
 
   public:
-    VexXModem(Stream *_s) : s(_s) {
+    VexXModem(Stream *_s, bool _log_enabled = false) : s(_s), log_enabled(_log_enabled) {
         if (log_enabled)
             log.open("xmodem.log", O_WRITE | O_CREAT | O_TRUNC | O_SYNC);
         fast_write = false;
-        log_enabled = false;
         checksum_method = BIT8;
     }
     ~VexXModem() {
@@ -99,9 +98,6 @@ class VexXModem {
     void send_packet(uint8_t *buf, uint16_t size);
     void enable_fast_write(bool v) {
         fast_write = v;
-    }
-    void enable_log(bool v) {
-        log_enabled = v;
     }
 };
 
