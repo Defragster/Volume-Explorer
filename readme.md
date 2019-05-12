@@ -125,6 +125,7 @@ void loop() {
 - There's no strings size checks, default path is 256 long, be careful.
 - Under Arduino / TeensyDuino IDE serial monitor set the line ending setting to "carriage return"
 - Should work with any terminal app (tested with iTerm2 + tycmd monitor - also tested with screen) - I did not tried with Linux but there's not reason it would not work.
+- Xmodem does handle any kind of timeouts, the library is intended to be used over USB which is fast enough
 
 
 **vintage shells are so cool ;-)
