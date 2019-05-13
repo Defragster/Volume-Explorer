@@ -134,5 +134,7 @@ void loop() {
 - Xmodem does not handle any kind of timeouts, the library is intended to be used over USB which is fast enough
 
 
+This library uses tiny regexp from https://github.com/kokke/tiny-regex-c
+
 **vintage shells are so cool ;-)
 enjoy !**
